@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spring Nails</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="wrapper">
+            <div class="logo"><a href='#home'>Spring Nails</a></div>
+            <div class="menu">
+                <ul>
+                    <li><a href="#home">Beranda</a></li>
+                    <li><a href="#galeri">Galeri</a></li>
+                    <li><a href="#tentang-kami">Tentang Kami</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="wrapper">
+        <section id="home">
+            <img src="https://img.freepik.com/free-vector/set-drawn-manicure-hand_52683-44229.jpg?w=740&t=st=1669724710~exp=1669725310~hmac=752b2fe3317c11d123b997f517d0ac8ba83094134b525928d723b3290b89eb7f" width="300" height="300" alt="Gambar Seni Kuku"/>
+            <div class="kolom">
+                <p class="deskripsi">Seni Kuku</p>
+                <h2>Pelayanan Maksimal</h2>
+                <p>Nail art digunakan untuk menambah kecantikan dan sebagai sebuah bentuk ekspresi diri seorang wanita masa kini agar tampil lebih modis, tampak modern dan menarik perhatian.</p>
+            </div>
+        </section>
+               <section id="galeri">
+            <div class="kolom">
+                <h2>Galeri</h2>
+                <div class="gallery-container">
+                    <button class="prev" onclick="scrollGallery(-1)">&#10094;</button>
+                    <div class="gallery" id="gallery">
+                        <img src="assets/foto1.jpg" alt="Foto 1">
+                        <img src="assets/foto2.jpg" alt="Foto 2">
+                        <img src="assets/foto3.jpg" alt="Foto 3">
+                        <img src="assets/foto4.jpg" alt="Foto 4">
+                        <img src="assets/foto5.jpg" alt="Foto 5">
+                        <img src="assets/foto6.jpg" alt="Foto 6">
+                    </div>
+                    <button class="next" onclick="scrollGallery(1)">&#10095;</button>
+                </div>
+            </div>
+        </section>
+        <section id="tentang-kami">
+            <div class="kolom">
+                <h2>Tentang Kami</h2>
+                <p>Detail informasi tentang kami.</p>
+            </div>
+        </section>
+        <section id="kontak">
+            <div class="kolom">
+                <h2>Kontak</h2>
+                <p>Hubungi kami melalui informasi berikut:</p>
+                <ul>
+                    <li>Nomor Telepon: <a href="tel:+6281234567890">+62 851-6282-5841</a></li>
+                    <li>WhatsApp: <a href="https://wa.me/0851-6282-5841" target="_blank">+62 851-6282-5841</a></li>
+                    <li>Instagram: <a href="https://www.instagram.com/springnails___?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">@springnails___</a></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+    <script>
+        function scrollGallery(direction) {
+            const gallery = document.getElementById('gallery');
+            const scrollAmount = 300; // lebar gambar
+            gallery.scrollBy({
+                left: direction * scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
